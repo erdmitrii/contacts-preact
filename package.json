@@ -1,0 +1,22 @@
+{
+  "name": "preact-contacts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:diajelovic/preact-contacts.git",
+  "author": "Дмитрий Ермошко",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "dependencies": {
+    "babel-preset-stage-0": "^6.24.1",
+    "preact": "^8.1.0",
+    "preact-redux": "^2.0.1",
+    "redux": "^3.6.0",
+    "uuid": "^3.0.1",
+    "webpack": "^2.6.1"
+  }
+}
