@@ -14,7 +14,7 @@ export default ({
             <h4>Имя: {name}</h4>
             <h4>Фамилия: {lastName}</h4>
             <p>Телефон (моб): {phone}</p>
-            <p>Адрес (рабочий): {address}</p>
+            <p>Адрес: {address}</p>
         </div>
     );
 
