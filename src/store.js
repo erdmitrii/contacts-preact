@@ -25,12 +25,12 @@ const contactsList = (state, action) => {
             return action.contacts;
             break;
         case 'ADD_CONTACT':
-            return [...state, contact(null, action)]
+            return [...state, action]
             break;
         case 'SAVE_CONTACT':
             return state.map(c => {
                 if (action.id == c.id) {
-                    return contact(null, action);
+                    return action;
                 }
 
                 return c;

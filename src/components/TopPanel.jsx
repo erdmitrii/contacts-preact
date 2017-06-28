@@ -11,13 +11,16 @@ const TopPanel = ({onAddClick}) => {
     </div>
 }
 
+//определяем рабочие методы компонента
 const mapDispatchToProps = (dispatch) => ({
     onAddClick() {
+        //вызывает redux метод для добавлени пустого контакта
         dispatch(addContact({}))
     }
 });
 
+//экспортируем компонент с определенными ранее методами
 export default connect(
-    null,
-    mapDispatchToProps,
+    null, //state  
+    mapDispatchToProps, 
 )(TopPanel)

@@ -9,7 +9,7 @@ const ContactsList = ({contacts, onRemoveContactClick, onEditContactClick, onSav
             return <Contact
                 key={contact.id}
                 {...contact}
-                onRemoveClick={() => onRemoveContactClick(contact.id, contact.objectKey)}
+                onRemoveClick={() => onRemoveContactClick(contact.id)}
                 onEditClick={() => onEditContactClick(contact.id)}
                 onSaveClick={onSaveContactClick}
             />
@@ -17,10 +17,12 @@ const ContactsList = ({contacts, onRemoveContactClick, onEditContactClick, onSav
     </div>
 };
 
+//получаем состояние redux, текущие контакты
 const mapStateToProps = (state) => ({
     contacts: state
 });
 
+//определяем рабочие методы компонента
 const mapDispatchToProps = (dispatch) => ({
     onRemoveContactClick(id) {
         firebase.database().ref(id).remove();
@@ -37,4 +39,5 @@ const mapDispatchToProps = (dispatch) => ({
     }
 });
 
+//экспорт компонента с заданными переменными состояния и методами
 export default connect(mapStateToProps, mapDispatchToProps) (ContactsList)

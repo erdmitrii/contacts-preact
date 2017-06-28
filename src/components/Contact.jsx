@@ -59,6 +59,7 @@ export default ({
         );
     }
 
+    //вывод данных
     return (
         <div className="contact">
             {!editing && (

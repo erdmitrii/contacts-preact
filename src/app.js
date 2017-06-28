@@ -4,7 +4,7 @@ import store from './store';
 import App from './components/App';
 
 import {loadContacts} from './actions';
-
+// получаем данные из firebase
 firebase.database().ref().once('value', (res) => {
     let userData = res.val(),
         data = [];
@@ -13,6 +13,7 @@ firebase.database().ref().once('value', (res) => {
         data.push(userData[key]);
     }
 
+    //если данные есть, то вызываем ивент для обновления через redux
     if (userData) {
         store.dispatch(loadContacts(data))
     }
